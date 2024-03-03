@@ -17,6 +17,8 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" class= "weather-app-icon"/>`;
   console.log(response.data);
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -52,9 +54,18 @@ function handleSearchSubmit(event) {
 
   searchCity(searchInput.value);
 }
+//adding the API for the real forecast data
+function getForecast(city) {
+  let apiKey = "f0c88b3aa014acb2c0t0fo1794b1b032";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+  console.log(apiUrl);
+}
 
 //add the new function in this space
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
+
   let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
@@ -84,4 +95,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Cuenca");
-displayForecast();
