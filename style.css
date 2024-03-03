@@ -93,3 +93,21 @@ a {
   position: relative;
   top: -0.4em;
 }
+
+.weather-forecast {
+  margin-top: 20px;
+  color: #000;
+}
+
+.weather-forecast-date {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 18px;
+}
+
+.min {
+  opacity: 0.5;
+}
