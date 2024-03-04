@@ -59,6 +59,7 @@ a {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
+  color: #443355;
 }
 
 .weather-app-details {
