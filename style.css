@@ -56,6 +56,11 @@ a {
   font-size: 22px;
 }
 
+.search-form-button:hover {
+  background-color: #feb5bf;
+  cursor: grabbing;
+}
+
 .weather-app-data {
   display: flex;
   justify-content: space-between;
@@ -124,4 +129,10 @@ a {
 .min {
   opacity: 0.5;
   padding: 0 10px;
+}
+
+.bunny-gif {
+  float: right;
+  margin-top: -65px;
+  width: 60px;
 }
